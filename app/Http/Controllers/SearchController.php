@@ -22,7 +22,7 @@ class SearchController extends Controller
 
 
     public function search(Request $request){
-        $query = $request->input('search');
+        $query = htmlspecialchars($request->input('search'));
 
         if(! isset($query)){
             return redirect('/');
