@@ -28,6 +28,7 @@ class SearchController extends Controller
             return redirect('/');
         }
 
+
         $posts = $this->postRepository->searchPost($query);
 
         return view('blog.pages.search', compact('posts'));
